@@ -1,0 +1,57 @@
+{
+  "name": "bugx",
+  "version": "0.1.2",
+  "description": "Local-first AI code audit agent with coverage ledger, reproducible PoC verification, and MCP integration.",
+  "homepage": "https://bugx.dev",
+  "author": {
+    "name": "BugX",
+    "url": "https://bugx.dev"
+  },
+  "license": "MIT",
+  "keywords": [
+    "security",
+    "code-audit",
+    "code-review",
+    "vulnerability",
+    "mcp",
+    "bugx"
+  ],
+  "agents": "./agents",
+  "skills": "./skills",
+  "mcpServers": {
+    "bugx-supervisor": {
+      "command": "bugx",
+      "args": [
+        "mcp",
+        "serve",
+        "--root",
+        ".",
+        "--role",
+        "host"
+      ]
+    },
+    "bugx-supervisor-worker": {
+      "command": "bugx",
+      "args": [
+        "mcp",
+        "serve",
+        "--root",
+        ".",
+        "--role",
+        "worker"
+      ]
+    },
+    "bugx-docs": {
+      "command": "bugx",
+      "args": [
+        "mcp",
+        "docs",
+        "serve",
+        "--root",
+        ".",
+        "--db",
+        ".bugx/knowledge/docs.sqlite3"
+      ]
+    }
+  }
+}
