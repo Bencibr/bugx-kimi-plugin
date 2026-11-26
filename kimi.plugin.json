@@ -1,7 +1,7 @@
 {
   "name": "bugx",
-  "version": "0.1.2",
-  "description": "Local-first AI code audit agent with coverage ledger, reproducible PoC verification, and MCP integration.",
+  "version": "0.1.5",
+  "description": "Autonomous code review and testing agent. Catches hidden deep bugs for developers, automates black-box, functional, and performance testing for QA, and ensures rock-solid software delivery.",
   "homepage": "https://bugx.dev",
   "author": {
     "name": "BugX",
@@ -18,6 +18,25 @@
   ],
   "agents": "./agents",
   "skills": "./skills",
+  "interface": {
+    "defaultLocale": "zh-CN",
+    "displayName": "BugX",
+    "shortDescription": "自主代码审查与自主测试智能体",
+    "longDescription": "BugX 是一个具备自主代码审查与测试能力的智能体，严把代码交付关：它帮助开发人员在写完代码后自动排查隐藏的深层 Bug，减少反复排错与返工；帮助测试人员自动化运行黑盒测试、功能验证与性能测试，自动覆盖手工盲测难以覆盖的极端场景；确保代码功能符合要求、具备良好的健壮性和稳定性。让开发和测试在繁琐的工作中解放双手，大幅提高工作效率、全面提升代码质量、显著降低后期维护成本，实现科技服务于人。",
+    "developerName": "BugX",
+    "websiteURL": "https://bugx.dev",
+    "category": "PRODUCTIVITY",
+    "hostKind": "local",
+    "tryPrompts": [
+      "对当前项目执行自主代码审查，找出深层 Bug",
+      "为当前项目执行自动化测试，验证功能与稳定性"
+    ],
+    "brandColor": {
+      "light": "#0284c7",
+      "dark": "#0284c7"
+    },
+    "iconUrl": "https://bugx.dev/brand-mark.svg"
+  },
   "mcpServers": {
     "bugx-supervisor": {
       "command": "bugx",

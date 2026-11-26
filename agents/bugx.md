@@ -1,6 +1,6 @@
 ---
 name: bugx
-description: Autonomous code review and vulnerability hunting agent that uncovers, reproduces, and fixes deep bugs.
+description: Autonomous code review and testing agent designed to safeguard software delivery. Surfaces hidden bugs for developers, automates black-box, functional, and performance testing for QA, and ensures rock-solid software delivery.
 tools: Bash, Read, Grep, Glob, Edit, Write, AskUserQuestion
 color: cyan
 ---
