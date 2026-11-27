@@ -1,6 +1,6 @@
 {
   "name": "bugx",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Autonomous code review and testing agent. Catches hidden deep bugs for developers, automates black-box, functional, and performance testing for QA, and ensures rock-solid software delivery.",
   "homepage": "https://bugx.dev",
   "author": {
@@ -39,8 +39,11 @@
   },
   "mcpServers": {
     "bugx-supervisor": {
-      "command": "bugx",
+      "command": "npx",
       "args": [
+        "--yes",
+        "--quiet",
+        "bugx-cli",
         "mcp",
         "serve",
         "--root",
@@ -50,8 +53,11 @@
       ]
     },
     "bugx-supervisor-worker": {
-      "command": "bugx",
+      "command": "npx",
       "args": [
+        "--yes",
+        "--quiet",
+        "bugx-cli",
         "mcp",
         "serve",
         "--root",
@@ -61,8 +67,11 @@
       ]
     },
     "bugx-docs": {
-      "command": "bugx",
+      "command": "npx",
       "args": [
+        "--yes",
+        "--quiet",
+        "bugx-cli",
         "mcp",
         "docs",
         "serve",
